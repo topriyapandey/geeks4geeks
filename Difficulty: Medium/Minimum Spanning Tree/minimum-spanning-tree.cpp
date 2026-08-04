@@ -1,34 +1,39 @@
-class DSU {
+class DisjointSet {
 public:
-    vector<int> parent, sz;
+    vector<int> parent, rank;
 
-    DSU(int n) {
+    DisjointSet(int n) {
         parent.resize(n);
-        sz.assign(n, 1);
+        rank.resize(n, 0);
 
         for (int i = 0; i < n; i++)
             parent[i] = i;
     }
 
-    int find(int x) {
-        if (parent[x] == x)
-            return x;
-        return parent[x] = find(parent[x]);
+    int findParent(int node) {
+        if (parent[node] == node)
+            return node;
+
+        return parent[node] = findParent(parent[node]);
     }
 
-    bool unite(int a, int b) {
-        a = find(a);
-        b = find(b);
+    void unionByRank(int u, int v) {
+        u = findParent(u);
+        v = findParent(v);
 
-        if (a == b)
-            return false;
+        if (u == v)
+            return;
 
-        if (sz[a] < sz[b])
-            swap(a, b);
-
-        parent[b] = a;
-        sz[a] += sz[b];
-        return true;
+        if (rank[u] < rank[v]) {
+            parent[u] = v;
+        }
+        else if (rank[v] < rank[u]) {
+            parent[v] = u;
+        }
+        else {
+            parent[v] = u;
+            rank[u]++;
+        }
     }
 };
 
@@ -37,23 +42,26 @@ public:
     int spanningTree(int V, vector<vector<int>>& edges) {
 
         sort(edges.begin(), edges.end(),
-             [](vector<int> &a, vector<int> &b) {
+             [](vector<int>& a, vector<int>& b) {
                  return a[2] < b[2];
              });
 
-        DSU dsu(V);
+        DisjointSet ds(V);
 
-        int mstWeight = 0;
+        int sum = 0;
 
-        for (auto &edge : edges) {
-            int u = edge[0];
-            int v = edge[1];
-            int wt = edge[2];
+        for (auto &it : edges) {
 
-            if (dsu.unite(u, v))
-                mstWeight += wt;
+            int u = it[0];
+            int v = it[1];
+            int wt = it[2];
+
+            if (ds.findParent(u) != ds.findParent(v)) {
+                sum += wt;
+                ds.unionByRank(u, v);
+            }
         }
 
-        return mstWeight;
+        return sum;
     }
 };
