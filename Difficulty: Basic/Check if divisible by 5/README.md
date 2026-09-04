@@ -1,0 +1,8 @@
+<h2><a href="https://www.geeksforgeeks.org/problems/check-if-divisible-by-52730/1">Check if divisible by 5</a></h2><h3>Difficulty Level : Difficulty: Basic</h3><hr><div class="problems_problem_content__Xm_eO" style="--text-color: var(--problem-text-color);"><p><span style="font-size: 18px;">Given a number <strong>n</strong> in the form of string, check if the number is divisible by <strong>5</strong>. </span></p>
+<p><strong><span style="font-size: 18px;">Examples:</span></strong></p>
+<pre><strong><span style="font-size: 18px;">Input:</span> </strong><span style="font-size: 18px;"><span style="font-size: 14pt;">n</span> <span style="font-size: 14pt;">= "5"</span></span>
+<strong><span style="font-size: 18px;">Output: </span></strong><span style="font-size: 18px;">true</span><strong><span style="font-size: 18px;"><br></span></strong><strong><span style="font-size: 18px;">Explanation:</span> </strong><span style="font-size: 18px;">5 is divisible by 5.</span></pre>
+<pre><strong><span style="font-size: 18px;">Input:</span> </strong><span style="font-size: 18px;">n = "121"</span>
+<strong><span style="font-size: 18px;">Output:</span> </strong><span style="font-size: 18px;">false</span>
+<strong><span style="font-size: 18px;">Explanation:</span> </strong><span style="font-size: 18px;">121 is not divisible </span><span style="font-size: 18px;">by 5.</span></pre>
+<p><span style="font-size: 18px;"><strong>Constraints:</strong><br>1 ≤ n ≤ 10<sup>5</sup></span></p></div><br><p><span style=font-size:18px><strong>Topic Tags : </strong><br><code>Mathematics</code>&nbsp;<code>Modular Arithmetic</code>&nbsp;
