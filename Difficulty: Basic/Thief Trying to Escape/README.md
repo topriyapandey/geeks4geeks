@@ -1,0 +1,9 @@
+<h2><a href="https://www.geeksforgeeks.org/problems/thief-try-to-excape0710/1">Thief Trying to Escape</a></h2><h3>Difficulty Level : Difficulty: Basic</h3><hr><div class="problems_problem_content__Xm_eO" style="--text-color: var(--problem-text-color);"><p><span style="font-size: 18px;">A thief trying to escape from jail has to cross <strong>n</strong> walls whose heights are given in <strong>arr[]</strong>. In one jump, he can climb <strong>x</strong> feet, but due to the slippery nature of the walls, he slips back by <strong>y</strong> feet after every jump. Calculate the total number of jumps required to cross all walls and escape from the jail. After crossing a wall, the thief begins from ground level to cross the next wall.</span></p>
+<p><strong><span style="font-size: 18px;">Examples :</span></strong></p>
+<pre><span style="font-size: 18px;"><strong>Input</strong>: arr[] = {11, 10, 10, 9}, x = 10, y = 1
+<strong>Output</strong>: 5
+<strong>Explanation</strong>: For wall 11, the thief crosses it in 2 jumps. For walls 10, 10, and 9, only 1 jump is needed for each wall. So, total jumps required = 2 + 1 + 1 + 1 = 5.</span></pre>
+<pre><span style="font-size: 18px;"><strong>Input</strong>: arr[] = {25, 9}, x = 10, y = 2
+<strong>Output</strong>: 4
+<strong>Explanation</strong>: For wall 25, the thief crosses it in 3 jumps. For wall 9, only 1 jump is needed. So, total jumps required = 3 + 1 = 4.</span></pre>
+<p><span style="font-size: 18px;"><strong>Constraints:<br></strong></span><span style="font-size: 18px;">1 ≤ n ≤ 10<sup>5</sup>&nbsp;<br></span><span style="font-size: 18px;">1 ≤ arr[i] ≤ 10<sup>4</sup>&nbsp;<br></span><span style="font-size: 18px;">1 ≤ y &lt; x ≤ 100</span></p></div><p><span style=font-size:18px><strong>Company Tags : </strong><br><code>MakeMyTrip</code>&nbsp;<code>Cisco</code>&nbsp;<br><p><span style=font-size:18px><strong>Topic Tags : </strong><br><code>Mathematics</code>&nbsp;
